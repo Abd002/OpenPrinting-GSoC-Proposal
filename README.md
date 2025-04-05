@@ -39,12 +39,22 @@ My name is Abdelrahman Khalifa. I am in my final year of Computer Engineering, e
 - ### **Why Me:**  
   I have strong experience in C/C++ and Qt and have already explored `cpdb-libs` and `cpdb-backend-cups` repositories, as well as D-Bus APIs. My problem-solving experience will help me complete this task efficiently.  
 
+- ### **Technical Approach**
+  1. Extend D-Bus  
+      - Adding **error** signal with its details like (Id, message, action)  
+      - Adding **resolveError** method to handle the error  
+  2. cpdb backend  
+      - Detect certificate errors  
+      - Emit **error** signal and handle **resolveError** request to solve the problem  
+  3. cpdb libs  
+      - Attach frontend to error so it can listen to it  
+      - Can solve the problem by calling **resolveError**
+      - Add some API functionality so that a print dialog can make use of it to display the error.
 - ### **Time Commitment:**  
   - **Before GSoC:** 10+ hours/week to familiarize myself with the codebase and architecture and communicate with mentors.  
   - **During GSoC:** 40 hours/week except during my final exams.  
     - **Final exams:** From **June 9 to June 23**; reduced availability (~10 hours/week).  
   - **After GSoC:** I want to continue contributing to the project, help others, and possibly become a mentor.  
-
 
 ### **Expected Timeline:**  
 
